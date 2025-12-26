@@ -11,7 +11,7 @@ class TabletLayout extends StatelessWidget {
       children: [
         Expanded(child: MobileLayout()),
         SizedBox(width: 32),
-        SecondView(),
+        Expanded(flex: 3, child: SecondView()),
       ],
     );
   }
