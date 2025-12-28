@@ -22,6 +22,7 @@ class CustomLatestTransaction extends StatelessWidget {
       child: Row(
         children: [
           SvgPicture.asset(latestTransactionModel.image),
+          SizedBox(width: 10),
           Column(
             children: [
               Text(

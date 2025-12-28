@@ -6,19 +6,17 @@ class CustomTextField extends StatelessWidget {
   final String hint;
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 60,
-      width: 230,
-      child: TextField(
-        decoration: InputDecoration(
-          border: OutlineInputBorder(
-            borderSide: BorderSide.none,
-            borderRadius: BorderRadius.circular(16),
-          ),
-          fillColor: Color(0xffFAFAFA),
-          filled: true,
-          hintText: hint,
-          hintStyle: AppStyles.styleRegular16(),
+    return TextField(
+      decoration: InputDecoration(
+        border: OutlineInputBorder(
+          borderSide: BorderSide.none,
+          borderRadius: BorderRadius.circular(16),
+        ),
+        fillColor: Color(0xffFAFAFA),
+        filled: true,
+        hintText: hint,
+        hintStyle: AppStyles.styleRegular16().copyWith(
+          color: Color(0xffAAAAAA),
         ),
       ),
     );
