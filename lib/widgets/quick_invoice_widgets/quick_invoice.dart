@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/models/latest_transaction_model.dart';
 import 'package:responsive_dashboard/utils/app_images.dart';
 import 'package:responsive_dashboard/utils/app_styles.dart';
-import 'package:responsive_dashboard/widgets/custom_latest_transaction.dart';
-import 'package:responsive_dashboard/widgets/custom_text_field.dart';
+import 'package:responsive_dashboard/widgets/quick_invoice_widgets/custom_latest_transaction.dart';
+import 'package:responsive_dashboard/widgets/quick_invoice_widgets/custom_text_field.dart';
 
 class QuickInvoice extends StatelessWidget {
   const QuickInvoice({super.key});
@@ -28,8 +28,7 @@ class QuickInvoice extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 16),
-      height: 420,
-      width: 600,
+
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
         color: Colors.white,

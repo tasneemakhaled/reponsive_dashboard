@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/utils/app_styles.dart';
-import 'package:responsive_dashboard/widgets/custom_history_of_transaction.dart';
+import 'package:responsive_dashboard/widgets/quick_invoice_widgets/custom_history_of_transaction.dart';
 
 class TransactionHistory extends StatelessWidget {
   const TransactionHistory({super.key});

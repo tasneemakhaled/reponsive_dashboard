@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:responsive_dashboard/models/all_expenses_item_model.dart';
 
-import 'package:responsive_dashboard/widgets/active_all_expenses_item.dart';
-import 'package:responsive_dashboard/widgets/inActiveAllExpensesItems.dart';
+import 'package:responsive_dashboard/widgets/all_expenses_widgets/active_all_expenses_item.dart';
+import 'package:responsive_dashboard/widgets/all_expenses_widgets/inActiveAllExpensesItems.dart';
 
 class AllExpensesItem extends StatelessWidget {
   const AllExpensesItem({

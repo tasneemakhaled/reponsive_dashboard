@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/utils/app_images.dart';
 import 'package:responsive_dashboard/utils/app_styles.dart';
-import 'package:responsive_dashboard/widgets/transaction_history.dart';
+import 'package:responsive_dashboard/widgets/transaction_history_widgets/transaction_history.dart';
 
 class ThirdView extends StatelessWidget {
   const ThirdView({super.key});

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/widgets/custom_drawer.dart';
+import 'package:responsive_dashboard/widgets/drawer_widgets/custom_drawer.dart';
 
 class MobileLayout extends StatelessWidget {
   const MobileLayout({super.key});
