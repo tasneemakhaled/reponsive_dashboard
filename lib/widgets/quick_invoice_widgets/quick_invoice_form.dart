@@ -68,7 +68,7 @@ class QuickInvoiceForm extends StatelessWidget {
           children: [
             Expanded(
               child: SizedBox(
-                height: 60,
+                height: 50,
                 child: TextButton(
                   onPressed: () {},
                   child: Text(

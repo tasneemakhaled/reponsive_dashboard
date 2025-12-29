@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/utils/app_images.dart';
-import 'package:responsive_dashboard/utils/app_styles.dart';
+import 'package:responsive_dashboard/widgets/card_widgets/my_cards_section.dart';
 import 'package:responsive_dashboard/widgets/transaction_history_widgets/transaction_history.dart';
 
 class ThirdView extends StatelessWidget {
@@ -9,15 +8,13 @@ class ThirdView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.all(10),
       decoration: BoxDecoration(color: Color(0xffFFFFFF)),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('My card', style: AppStyles.styleSemiBold20()),
-          Image(
-            height: 200,
-            color: Color(0xff5fbef3),
-            image: AssetImage(Assets.imagesCardBackground),
-          ),
+          MyCardsSection(),
+          SizedBox(height: 12),
           TransactionHistory(),
         ],
       ),

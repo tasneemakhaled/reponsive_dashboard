@@ -7,7 +7,7 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 60,
+      height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           backgroundColor: Color(0xff4EB7F2),
