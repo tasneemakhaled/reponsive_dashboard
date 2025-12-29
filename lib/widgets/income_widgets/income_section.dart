@@ -21,18 +21,17 @@ class IncomeSection extends StatelessWidget {
           const SizedBox(height: 16),
 
           // استخدمي AspectRatio للتحكم في ارتفاع الـ Row بالكامل بالنسبة لعرضه
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              // الـ Chart يأخذ جزء من المساحة
-              const Expanded(
-                flex: 2, // تقدري تغيري النسبة دي (مثلاً 2 للشارت و 3 للتفاصيل)
-                child: IncomeChart(),
-              ),
+          Expanded(
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // الـ Chart يأخذ جزء من المساحة
+                Expanded(flex: 2, child: IncomeChart()),
 
-              // الـ Details تأخذ الجزء المتبقي بجانبها
-              const Expanded(flex: 3, child: IncomeDetails()),
-            ],
+                // الـ Details تأخذ الجزء المتبقي بجانبها
+                Expanded(flex: 3, child: IncomeDetails()),
+              ],
+            ),
           ),
         ],
       ),

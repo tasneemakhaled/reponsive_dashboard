@@ -14,10 +14,10 @@ class CustomHistoryOfTransaction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 4.0),
+      padding: const EdgeInsets.symmetric(vertical: 2.0),
       child: IntrinsicHeight(
         child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 4, vertical: 4),
+          padding: EdgeInsets.symmetric(horizontal: 2, vertical: 2),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12),
             color: Color(0xffFAFAFA),

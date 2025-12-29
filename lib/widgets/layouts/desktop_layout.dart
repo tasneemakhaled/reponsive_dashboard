@@ -12,9 +12,9 @@ class DesktopLayout extends StatelessWidget {
     return Row(
       children: [
         Expanded(child: MobileLayout()),
-        SizedBox(width: 32),
+        // SizedBox(width: 32),
         Expanded(flex: 2, child: SecondView()),
-        SizedBox(height: 12),
+        // SizedBox(height: 12),
         Expanded(child: ThirdView()),
       ],
     );

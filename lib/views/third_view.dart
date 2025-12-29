@@ -9,17 +9,17 @@ class ThirdView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Container(
-        padding: EdgeInsets.all(8),
-        decoration: BoxDecoration(color: Color(0xffFFFFFF)),
+    return Container(
+      padding: EdgeInsets.all(4),
+      decoration: BoxDecoration(color: Color(0xffFFFFFF)),
+      child: Expanded(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             MyCardsSection(),
-            Divider(height: 40, color: Color(0xffF1F1F1)),
+            Divider(height: 20, color: Color(0xffF1F1F1)),
             TransactionHistory(),
-            IncomeSection(),
+            Expanded(child: IncomeSection()),
           ],
         ),
       ),
