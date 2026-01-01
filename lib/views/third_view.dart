@@ -12,16 +12,14 @@ class ThirdView extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(4),
       decoration: BoxDecoration(color: Color(0xffFFFFFF)),
-      child: Expanded(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            MyCardsSection(),
-            Divider(height: 20, color: Color(0xffF1F1F1)),
-            TransactionHistory(),
-            Expanded(child: IncomeSection()),
-          ],
-        ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          MyCardsSection(),
+          Divider(height: 20, color: Color(0xffF1F1F1)),
+          TransactionHistory(),
+          IncomeSection(),
+        ],
       ),
     );
   }

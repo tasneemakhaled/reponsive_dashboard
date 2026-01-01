@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/widgets/drawer_widgets/custom_drawer.dart';
+import 'package:responsive_dashboard/views/second_view.dart';
+import 'package:responsive_dashboard/views/third_view.dart';
 
 class MobileLayout extends StatelessWidget {
   const MobileLayout({super.key});
 
   @override
   Widget build(BuildContext context) {
-     return Row(children: [Expanded(child: CustomDrawer())]);
+    return SingleChildScrollView(
+      child: Column(children: [SecondView(), ThirdView()]),
+    );
   }
 }

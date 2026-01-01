@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/utils/app_styles.dart';
 import 'package:responsive_dashboard/widgets/income_widgets/income_model.dart';
@@ -5,7 +7,7 @@ import 'package:responsive_dashboard/widgets/income_widgets/income_model.dart';
 class IncomeDetails extends StatelessWidget {
   const IncomeDetails({super.key});
 
-  // قائمة البيانات
+  // القائمة الثابتة للبيانات
   static const items = [
     IncomeModel(
       title: 'Design service',
@@ -27,19 +29,14 @@ class IncomeDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      // shrinkWrap:
-      //     true, // مهم جداً إذا كان الـ ListView داخل Column أو ScrollView
-      // physics: const NeverScrollableScrollPhysics(), // لمنع التمرير الداخلي إذا كان الأب يدعم التمرير
-      itemCount: items.length,
-      itemBuilder: (context, index) {
-        return ItemDetails(incomeModel: items[index]);
-      },
+    log(MediaQuery.of(context).size.width.toString());
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: items.map((e) => ItemDetails(incomeModel: e)).toList(),
     );
   }
 }
 
-// ويدجت منفصل لكل عنصر (لجعل الكود أنظف)
 class ItemDetails extends StatelessWidget {
   const ItemDetails({super.key, required this.incomeModel});
 
@@ -48,8 +45,10 @@ class ItemDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text(incomeModel.title, style: AppStyles.styleRegular16()),
-      trailing: Text(incomeModel.value, style: AppStyles.styleMedium16()),
+      
+      contentPadding: EdgeInsets.zero,
+
+      
       leading: Container(
         width: 12,
         height: 12,
@@ -58,6 +57,15 @@ class ItemDetails extends StatelessWidget {
           color: incomeModel.color,
         ),
       ),
+
+    
+      title: Text(incomeModel.title, style: AppStyles.styleRegular16()),
+
+  
+      trailing: Text(incomeModel.value, style: AppStyles.styleMedium16()),
     );
   }
 }
+
+// shrink wrap truee  = معناها انها بتبني كله مرة واحدة
+// sliver fill remaining(has scropale body:false) = معناها انها بتبني بشكل lazy

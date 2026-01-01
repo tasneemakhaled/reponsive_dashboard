@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/widgets/income_widgets/income_chart.dart';
 import 'package:responsive_dashboard/widgets/income_widgets/income_details.dart';
 import 'package:responsive_dashboard/widgets/income_widgets/income_header.dart';
+import 'package:responsive_dashboard/widgets/income_widgets/income_section_body.dart';
 
 class IncomeSection extends StatelessWidget {
   const IncomeSection({super.key});
@@ -15,26 +16,16 @@ class IncomeSection extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
       ),
       child: Column(
-        mainAxisSize: MainAxisSize.min,
         children: [
           const IncomeHeader(),
           const SizedBox(height: 16),
 
-          // استخدمي AspectRatio للتحكم في ارتفاع الـ Row بالكامل بالنسبة لعرضه
-          Expanded(
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                // الـ Chart يأخذ جزء من المساحة
-                Expanded(flex: 2, child: IncomeChart()),
-
-                // الـ Details تأخذ الجزء المتبقي بجانبها
-                Expanded(flex: 3, child: IncomeDetails()),
-              ],
-            ),
-          ),
+          IncomeSectionBody(),
         ],
       ),
     );
   }
 }
+
+
+// sliver fill remainig its height is the height of screeen
